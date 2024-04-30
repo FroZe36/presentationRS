@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>CI/CD</title>
+
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/black.css">
+
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h2>What is CI/CD?</h2>
+        <p class="fragment">
+          CI/CD objectives:
+        <ul>
+          <li class="fragment">Providing a consistent and automated way of assembling, packaging and testing products or
+            applications</li>
+          <li class="fragment">Automation of deployment in different environments</li>
+          <li class="fragment">Minimizing errors and problems</li>
+        </ul>
+        </p>
+      </section>
+      <section>
+        <h2>Stages of CI/CD</h2>
+        <img src="./assets/cicd-pipeline-diagram.png" alt="">
+      </section>
+      <section>
+        <h2>What is Continuous Integration?</h2>
+        <p class="fragment">CI is all about integrating code and making sure it works.</p>
+        <ul class="fragment">
+          <li>Tests</li>
+          <li>ESlint</li>
+          <li>TypeScript</li>
+        </ul>
+      </section>
+      <section>
+        <img src="./assets/continious-integration.png" alt="">
+      </section>
+      <section>
+        <h2>What is Continuous Delivery?</h2>
+        <p class="fragment">
+          Continuous delivery is an extension of continuous integration. Continuous Delivery ensures that the code is
+          ready and can be delivered at any time. Requires CI!</p>
+      </section>
+      <section>
+        <img src='./assets/continious-delivery-btn.png' alt="">
+      </section>
+      <section>
+        <h2>What is Continuous Deployment?</h2>
+        <p class="fragment">
+          Continuous deployment is very similar to Continuous delivery. The only difference is that continuous delivery
+          require manual deployment (or more specificly approval).
+
+          The main purpose of CD is to release automatically every good build to the users.
+        </p>
+      </section>
+      <section>
+        <img src="./assets/differenceCD.png" alt="">
+      </section>
+      <section>
+        <h2>Benefits from implementing CI/CD process in projects</h2>
+      </section>
+      <section>
+        <h3>Continuous Integration:</h3>
+        <ul>
+          <li>Detecting bug in early stage - the earlier bug is detected, the less harm it makes</li>
+          <li>Reduces bug count.</li>
+          <li>The development process becomes more transparent - teams is notifed when build fails and what caused it.
+          </li>
+          <li>Efficient - since whole process is automated, manual testing is reduced.</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Continuous Delivery & Deployment:</h3>
+        <ul>
+          <li>Reduce the risk - deployment process may get complicated. It can consist of many steps. The more
+            complicated
+            the process, the greater the probability of human error. By automating this process we can assure, that
+            every deployment will look similar.</li>
+          <li>Painless deployment, happier team.</li>
+          <li>Reduces costs.</li>
+          <li>A fully automated and transparent process.</li>
+          <li>Releases may happend more frequently.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Costs of implementing CI/CD</h2>
+        <p class="fragment">CI / CD is an investment and as each investment has its own costs that are worth knowing
+          before implementing
+          this process.</p>
+      </section>
+      <section>
+        <h2>Continuous Integration costs:</h2>
+        <ul>
+          <li>Team needs to write automated tests.</li>
+          <li>Server for automated tests.</li>
+          <li>Developers need to merge their changes as often as possible.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Continuous Delivery & Deployment - Costs:</h2>
+        <ul>
+          <li>Strong foundations in CI process.</li>
+          <li>Testing culture must be at its best. CD process require the highest quality of tests.</li>
+          <li>Documentation needs to be updated frequently to keep up after deployments.</li>
+          <li>The whole process requires knowledge and requires an experience, otherwise it can cause more problems than
+            benefits.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>How does CI/CD process looks in practice?</h2>
+        <code class="fragment">code > commit changes > build > unit test > deploy to staging machine > auto tests > deploy to production</code>
+      </section>
+      <section>
+        <h2>Process may look like:</h2>
+        <img src="./assets/cicdprocess.jpg" alt="">
+      </section>
+      <section>
+        <h3>Top CI/CD Tools To Have in 2024</h3>
+        <img src="/assets/PopularCICD.webp" alt="">
+      </section>
+      <section>
+        <h1>Thanks for watching!</h1>
+      </section>
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+  </script>
+</body>
+
+</html>
